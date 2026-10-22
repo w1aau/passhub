@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#005ABB">
+		<meta name="robots" content="noindex">
+		<title>PassHub - Login</title>
+		<link rel="icon" type="image/png" href="public/img/logo/favicon.png">
+		<link rel="stylesheet" href="public/css/login-xmath.css?v=4">
+
+	</head>
+	<body class="loginPage bg_image">
+		<main class="loginMain">
+			<section class="popup landingContent landingContent--instruction">
+				<h5 class="heading heading--h5 heading--instruction popup__title">
+					New to PassHub?
+          <svg class="landingContent__icon landingContent__icon--close" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="30" rx="15" fill="#EBEFF5"/>
+            <path d="M9 9L15 15M15 15L21 21M15 15L9 21M15 15L21 9" stroke-width="2" stroke="black"/>
+          </svg>
+				</h5>
+				<article class="landingContent__instruction landingContent__instruction--hidden">
+					<div class="landingContent__text--hidden">
+						<p class="text">Complete the following steps before using the service</p>
+						<ol class="landingContent__list landingContent__list--ordered">
+							<li class="landingContent__item landingContent__item--ordered">
+								<h5 class="heading heading--h5 heading--instruction">Install WWPass Key app</h5>
+								<p class="text">WWPass Key app is your key to access PassHub. You need to install and initialize WWPass Key app on your smartphone before you can log in to PassHub.</p>
+								<a class="button button--store button--store-ios" href="https://itunes.apple.com/us/app/wwpass-passkey-lite/id984532938">AppStore</a>
+								<a class="button button--store button--store-google" href="https://play.google.com/store/apps/details?id=com.wwpass.android.passkey">Google Play</a>
+							</li>
+							<li class="landingContent__item landingContent__item--ordered">
+								<h5 class="heading heading--h5 heading--instruction">PassHub on your desktop</h5>
+								<p class="text">Scan QR code on PassHub login page with your WWPass Key app to access PassHub on your desktop.</p>
+							</li>
+							<li class="landingContent__item landingContent__item--ordered">
+								<h5 class="heading heading--h5 heading--instruction">PassHub on your smartphone</h5>
+								<p class="text">Tap the QR code on PassHub login page on your phone. WWPass Key app pops up automatically to log you in.</p>
+							</li>
+						</ol>
+						<button class="button button--wide button--icon button--instruction" type="button" name="button">I already have WWPass Key</button>
+					</div>
+				</article>
+			</section>
+			<section class="landingContent landingContent--main">
+				<article class="landingContent__info landingContent__infoShare container">
+					<a class="nav__link nav__link--logo-bottom" href="#">
+						<img class="main-nav__logo main-nav__logo--bottom" src="public/img/landing/xmath-logo.svg" width="130" height="32" alt="XMath">
+					</a>
+					<h3 class="heading heading--h3 heading--left heading--nopadding-left">  
+						Sign in to Authorize
+					</h3>
+					<div class="nav nav--bottom">
+						<a class="nav__link nav__link--header nav__link--help" href="https://passhub.net/doc" target="_blank">
+							<svg class="nav__icon nav__icon--help" width="25" height="25">
+								<use xlink:href="public/img/landing/sprite.svg#icon-help"></use>
+							</svg>
+							Help
+						</a>
+						<a class="nav__link nav__link--header nav__link--contact" href="feedback.php">
+							<svg class="nav__icon nav__icon--contacts" width="25" height="25">
+								<use xlink:href="public/img/landing/sprite.svg#icon-contact"></use>
+							</svg>
+							Contact Us
+						</a>
+					</div>
+				</article>
+				<article class="landingContent__code">
+					<div class="landingContent__code-container">
+						<div class="landingContent__codeHeading">
+							<h4 class="heading heading--center heading--h4 heading--dark heading--code">Log in</h4>
+							<h5 class="heading heading--center heading--h5 heading--code heading--getStarted button--getStarted">Get started</h5>
+						</div>
+						<div class="landingContent__text">
+							<p class="text--sm text--center text--dark landingContent__text--qr" id="qrtext">
+								Scan the QR code with
+								<span class="landingContent__text--qr-bold button--getStarted" style="cursor:pointer; color:black;">
+									WWPass<sup>™</sup> Key App</span>  
+							</p>
+						</div>
+						<div
+							class="landingContent__code-qr" id="qrcode">
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+		<div id="csrf" data-csrf='{{ verifier }}' style='display:none'></div>
+		<div id="universal" data-universal='{{ universal }}' style='display:none'></div>
+		<div class="overlay"></div>
+		<script src="public/js/landing.js"></script>
+		<script src="public/js/login-xmath.js?v=2"></script>
+		<script src="public/js/dist/login.js?v=09"></script>
+	</body>
+</html>

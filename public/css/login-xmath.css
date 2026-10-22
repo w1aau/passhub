@@ -1,0 +1,618 @@
+@font-face {
+  font-family: Inter;
+  src: url('../fonts/inter/Inter-upright-var.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+html {
+  min-height: 100%;
+}
+
+body.loginPage {
+  font-family: Inter, Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  color: #000;
+}
+
+.loginPage a {
+  text-decoration: none;
+}
+
+.loginPage .heading {
+  margin: 0;
+}
+
+.loginPage .button--getStarted {
+  cursor: pointer;
+}
+
+.loginPage .landingContent__text--qr-bold {
+  font-weight: 700;
+}
+
+.loginPage .landingContent--instruction {
+  display: none;
+}
+
+.loginPage .popup__title {
+  position: relative;
+}
+
+.loginPage .landingContent__icon--close {
+  position: absolute;
+  cursor: pointer;
+  stroke-width: 2px;
+}
+
+.loginPage .landingContent__list {
+  list-style: none;
+  counter-reset: stepCounter;
+}
+
+.loginPage .landingContent__item {
+  position: relative;
+}
+
+.loginPage .landingContent__item--ordered::before {
+  content: counter(stepCounter);
+  counter-increment: stepCounter;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.loginPage .overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+}
+
+.loginPage .overlay--visible {
+  display: block;
+}
+
+.loginPage,
+.loginPage *,
+.loginPage *::before,
+.loginPage *::after {
+  box-sizing: border-box;
+}
+
+.loginPage {
+  --xmath-yellow: #FFCD4E;
+  --xmath-cream: #fff4db;
+  min-width: 0;
+  color: #000000cc;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  background: #FAFAFB;
+  overflow-x: hidden;
+}
+
+.loginPage::before,
+.loginPage::after {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  border-radius: 50%;
+  background: var(--xmath-yellow);
+  pointer-events: none;
+}
+
+.loginPage::before {
+  width: 320px;
+  height: 320px;
+  top: 40px;
+  left: -80px;
+}
+
+.loginPage::after {
+  width: 260px;
+  height: 260px;
+  right: -130px;
+  bottom: 40px;
+}
+
+.loginPage .loginMain {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px;
+  place-items: center;
+}
+
+.loginPage .landingContent--main {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 260px 340px;
+  width: 600px;
+  max-width: none;
+  min-height: 417px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  background: transparent;
+  box-shadow: 0 18px 25px rgb(0 0 0 / 12%);
+}
+
+.loginPage .landingContent__infoShare {
+  display: flex;
+  flex-direction: column;
+  order: 0;
+  width: 260px;
+  max-width: none;
+  min-height: 417px;
+  margin: 0;
+  padding: 30px;
+  background: var(--xmath-cream);
+}
+.loginPage .main-nav__logo--bottom {
+  width: 130px;
+  height: 32px;
+  margin: 0;
+}
+
+.loginPage .landingContent__infoShare>.heading--h3 {
+  width: 100%;
+  max-width: none;
+  margin: 20px 0 0;
+  padding: 0;
+  color: #0b0b0b;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.loginPage .nav--bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 26px;
+  width: 100%;
+  margin: auto 0 0;
+  padding: 0;
+}
+
+.loginPage .nav--bottom .nav__link--header {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: auto;
+  height: auto;
+  color: #111;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.loginPage .nav--bottom .nav__link--header:hover {
+  text-decoration: underline;
+}
+
+.loginPage .nav--bottom .nav__icon {
+  display: none;
+}
+
+.loginPage .nav--bottom .nav__link--header::before {
+  content: '';
+  display: inline-block;
+  flex: none;
+  width: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.loginPage .nav--bottom .nav__link--help::before {
+  height: 18px;
+  background-image: url('../img/landing/xmath-help.svg');
+}
+
+.loginPage .nav--bottom .nav__link--contact::before {
+  height: 13px;
+  background-image: url('../img/landing/xmath-contact.svg');
+}
+
+.loginPage .landingContent__code {
+  position: static;
+  width: 340px;
+  min-height: 417px;
+  margin: 0;
+  padding: 0;
+}
+
+.loginPage .landingContent__code-container {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  max-width: none;
+  min-height: 417px;
+  margin: 0;
+  padding: 0 0 20px;
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  gap: 16px;
+}
+
+.loginPage .landingContent__codeHeading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: none;
+  width: 100%;
+  height: 50px;
+  background: var(--xmath-cream);
+}
+
+.loginPage .landingContent__codeHeading .heading--code {
+  display: grid;
+  flex: 1 1 0;
+  place-items: center;
+  width: auto;
+  max-width: none;
+  height: 50px;
+  margin: 0;
+  padding: 10px;
+  border-radius: 0;
+  color: #0b0b0b;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.loginPage .landingContent__codeHeading .heading--code:first-child {
+  background: #fff;
+  border-start-start-radius: 30px;
+}
+
+.loginPage .landingContent__codeHeading .heading--getStarted,
+.loginPage .landingContent__codeHeading .heading--getStarted:hover {
+  background: var(--xmath-yellow);
+  border-start-end-radius: 30px;
+}
+
+.loginPage .landingContent__codeHeading .heading--getStarted {
+  cursor: pointer;
+}
+
+.loginPage .landingContent__text {
+  width: 100%;
+  padding: 36px 20px 0;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.loginPage #qrtext {
+  display: block;
+  margin: 0 0 20px;
+  padding: 0;
+  color: #0b0b0b;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.loginPage #qrcode {
+  display: grid;
+  width: 256px;
+  height: 256px;
+  margin: 0 auto;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.loginPage #qrcode canvas,
+.loginPage #qrcode img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.loginPage .landingContent--instruction {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 500px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgb(0 0 0 / 14%);
+}
+
+.loginPage .landingContent--instruction .popup__title {
+  width: 100%;
+  max-width: none;
+  min-height: 70px;
+  margin: 0;
+  padding: 24px 30px;
+  border-radius: 0;
+  color: #0b0b0b;
+  background: #fbfbfd;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.loginPage .landingContent--instruction .landingContent__icon--close {
+  top: 20px;
+  right: 24px;
+
+}
+
+.loginPage .landingContent__instruction {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 30px 30px 50px;
+}
+
+.loginPage .landingContent--instruction .text {
+  max-width: none;
+  margin: 0 0 10px;
+  color: #0b0b0b;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.loginPage .landingContent--instruction .landingContent__list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.loginPage .landingContent--instruction .landingContent__item {
+  padding: 5px 0 5px 40px;
+}
+
+.loginPage .landingContent--instruction .landingContent__item--ordered::before {
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  color: #0b0b0b;
+  background: var(--xmath-yellow);
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.loginPage .landingContent--instruction .landingContent__item .heading--instruction {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 6px;
+  padding: 0;
+  color: #0b0b0b;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.loginPage .landingContent--instruction .button--store {
+  display: inline-block;
+  position: relative;
+  height: 36px;
+  min-width: 120px;
+  margin: 3px;
+  padding: 0;
+  border-radius: 7px;
+  border: 0;
+  background: #000;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.loginPage .landingContent--instruction .button--store::before {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+
+.loginPage .landingContent--instruction .button--store-ios::before {
+  background-image: url('../img/landing/app_apple_dark.svg');
+}
+
+.loginPage .landingContent--instruction .button--store-google::before {
+  background-image: url('../img/landing/app_google_dark.svg');
+}
+
+.loginPage .landingContent--instruction .button--instruction {
+  display: none;
+}
+
+.loginPage .overlay--visible {
+  z-index: 5;
+  background: rgb(30 34 45 / 52%);
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 680px) {
+  .loginPage .loginMain {
+    padding: 24px 16px;
+  }
+
+  .loginPage .landingContent--main {
+    grid-template-columns: 1fr;
+    width: min(100%, 340px);
+    min-height: 0;
+  }
+
+  .loginPage .landingContent--instruction .landingContent__item {
+  padding: 5px 0 5px 30px;
+}
+
+  .loginPage .landingContent__infoShare {
+    position: relative;
+    width: 100%;
+    min-height: 134px;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .loginPage .landingContent__infoShare>.heading--h3 {
+    margin-top: 14px;
+  }
+
+  .loginPage .nav--bottom {
+    position: absolute;
+    right: 30px;
+    width: auto;
+    margin: 0;
+    gap: 24px;
+  }
+
+  .loginPage .nav--bottom .nav__link--header {
+    gap: 0;
+    font-size: 0;
+  }
+
+  .loginPage .landingContent__code,
+  .loginPage .landingContent__code-container {
+    width: 100%;
+    min-height: 0;
+  }
+
+  .loginPage .landingContent__code-container {
+    background: linear-gradient(to bottom, transparent 50px, #fff 50px);
+  }
+
+  .loginPage .landingContent__codeHeading {
+    display: grid !important;
+  }
+
+  .loginPage .landingContent__text {
+    padding: 28px 16px 0;
+  }
+
+  .loginPage #qrtext {
+    display: none !important;
+  }
+
+  .loginPage .landingContent__code-container.xmath-mobile-qr #qrtext {
+    display: block !important;
+  }
+
+  .loginPage #qrcode.xmath-mobile-buttons {
+    display: block;
+    width: 270px;
+    height: auto;
+    min-height: 116px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: visible;
+    border: 0;
+    background: none;
+  }
+
+  .loginPage #qrcode .wwpassButtonContainer {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .loginPage #qrcode .wwpassLoginButton,
+  .loginPage #qrcode .wwpassQRButton {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 260px 50px;
+    color: #fff;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .loginPage #qrcode .wwpassLoginButton {
+    background-image: url('../img/landing/xmath-mobile-login.svg');
+  }
+
+  .loginPage #qrcode .wwpassQRButton {
+    background-image: url('../img/landing/xmath-mobile-start.svg');
+  }
+
+  .loginPage #qrcode.xmath-mobile-qr {
+    position: relative;
+    margin-bottom: 74px;
+    overflow: visible;
+  }
+
+  .loginPage #wwp_switch_to_button {
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 270px !important;
+    height: 50px;
+    padding: 0 16px !important;
+    transform: translateX(-50%);
+    border: 1px solid #FECC4E !important;
+    border-radius: 25px;
+    background: #fff !important;
+    color: #0b0b0b !important;
+    font-family: Inter, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center !important;
+    text-decoration: none !important;
+  }
+
+  
+  
+  .loginPage .landingContent--instruction {
+    top: 20px;
+    width: min(360px, calc(100vw - 32px));
+    max-height: calc(100vh - 40px);
+    transform: translateX(-50%);
+  }
+
+  .loginPage .landingContent--instruction .popup__title {
+    padding: 24px;
+  }
+
+  .loginPage .landingContent__instruction {
+    padding: 24px 24px 40px;
+  }
+}
